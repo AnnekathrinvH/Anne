@@ -6,14 +6,15 @@ function Rectangle(width, height) {
     }
   }
 
-function Square(leng) {
-    width: leng;
-    height: leng;
-    Rectangle.getArea.apply(this, arguments);
+/*I wanted to call the getArea function from the Rectangle in the Square constructor but I can not figure out how to do it!*/
+function Square(side) {
+    this.width = side;
+    this.height = side;
+
 }
 
   var rect = new Rectangle(4, 5);
   console.log(rect.getArea());
 
-  var sq = new Square(4);
+  var square = new Square(4);
   console.log(square.getArea());
