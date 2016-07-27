@@ -1,0 +1,173 @@
+*{
+  box-sizing: border-box;
+}
+#sprintlogo{
+  width: 18%;
+  float: left;
+}
+header{
+  overflow: hidden;
+}
+#menu{
+  float: right;
+  width: 3.5%;
+  margin: 20px;
+  cursor: pointer;
+}
+.splash{
+  position: relative;
+  text-align: center;
+
+
+}
+#reichstag{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  vertical-align: bottom;
+}
+#overlay{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+  z-index: 10;
+}
+
+.text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#Ueberschrift{
+  font-size: 50px;
+  color: white;
+  transform: translateY(210%);
+}
+
+#start{
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(220%);
+  font-size: 30px;
+  padding: 10px 40px 10px 40px;
+  border-radius: 40px;
+  color: orange;
+  border-style: solid;
+  background-color: yellow;
+  border-color: orange;
+  border-width: medium;
+}
+
+.outer{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: lightgray;
+  padding-left: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.box{
+display: inline-block;
+width:40%;
+padding:1.5%;
+vertical-align: top;
+}
+
+.inner{
+display: inline-block;
+vertical-align: top;
+}
+.icon{
+  width: 60px;
+  display: inline-block;
+}
+.text2{
+  display: inline-block;
+  width: 65%;
+  padding-left: 10%;
+}
+.smallheading{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.smalltext{
+  font-size: 16px;
+  margin-top: 0;
+}
+#footer{
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+}
+#largemenu{
+  right: 0;
+  top: -200%;
+  height: 100%;
+  width: 25%;
+  background-color: white;
+  z-index: 20;
+  position: absolute;
+  padding: 30px;
+  padding-left: 20px;
+}
+.menutext{
+  font-size: 25px;
+  color: blue;
+  padding: 20px
+}
+#lg{
+  font-size: 16px;
+}
+#close{
+  font-family: sans-serif;
+  right: 10px;
+  position: absolute;
+  color: grey;
+  font-size: 30px
+  cursor: pointer;
+}
+#largemenu.in{
+  transform: translateX(0);
+  transition-duration: 1s;
+  top: 0;
+  transition-property: transform;
+}
+.out{
+  transform: translateX(100%);
+}
+@media only screen and (max-width: 500px) {
+body{
+  overflow-x: hidden;
+  width: 100%;
+}
+  #Ueberschrift{
+      font-size: 25px;
+    }
+  #start{
+    font-size: 15px;
+    width: 40%;
+    transform: translateY(100%);
+  }
+.box{
+  width: 100%;
+}
+#largemenu{
+  width: 50%;
+}
+}
