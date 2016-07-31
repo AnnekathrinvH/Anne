@@ -26,67 +26,54 @@ body{
   background-size: cover;
   background-position: center;
   position: absolute;
-}
-
-.on{
-  transform: translateX(0);
-  transition-duration: 1s;
-  transition-property: transform;
-}
-
-.out{
   transform: translateX(-100%);
   transition-duration: 1s;
   transition-property: transform;
 }
 
-.standby{
-  transform: translateX(100%);
+.kitty.on{
+  transform: translateX(0);
   transition-duration: 1s;
   transition-property: transform;
 }
 
+.kitty.standby{
+  transform: translateX(100%);
+  transition-duration: 0s;
+  transition-property: transform;
+}
 
-.dots{
-  width: 200px;
+.dotcontainer{
+  transform: translateX(50%);
+  width: 300px;
   height: 70px;
+  position: absolute;
+  bottom: 5px;
+}
 
+.dot{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: white;
+  border-style: solid;
+  border-width: thick;
+  display: inline-block;
+  z-index: 10;
+  position: absolute;
+  bottom: 5px;
+  cursor: pointer;
 }
 #dot1{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border-color: white;
-  border-style: solid;
-  border-width: thick;
-  display: inline-block;
-  z-index: 10;
-  position: absolute;
-  bottom: 5px;
+  left: 0px;
 }
 #dot2{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border-color: white;
-  border-style: solid;
-  border-width: thick;
-  display: inline-block;
-  z-index: 10;
-  position: absolute;
-  bottom: 5px;
   left: 70px;
 }
 #dot3{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border-color: white;
-  border-style: solid;
-  border-width: thick;
-  display: inline-block;
-  z-index: 10;
-  position: absolute;
-  bottom: 5px;
   left: 140px;
+}
+
+.active{
+  background-color: white;
 }
