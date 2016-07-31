@@ -8,9 +8,9 @@
 
       function changeKittyState() {
 
-          kitties[on].classList.remove("on");
-          kitties[standby].classList.remove("standby");
-          kitties[standby].classList.add("on");
+          kitties[on].classList.remove('on');
+          kitties[standby].classList.remove('standby');
+          kitties[standby].classList.add('on');
 
           dots[on].classList.remove('active');
           dots[standby].classList.add('active');
@@ -20,7 +20,7 @@
           if(standby >= kitties.length) {
             standby = 0;
           }
-          kitties[standby].classList.add("standby");
+          kitties[standby].classList.add('standby');
 
           isTransitioning = true;
           kitties[on].addEventListener('transitionend', transitionEndHandler);
