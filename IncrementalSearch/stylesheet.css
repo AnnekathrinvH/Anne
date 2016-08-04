@@ -12,6 +12,15 @@ ul{
 .active{
   display: block;
 }
+
+.listItemHide {
+    display: none;
+}
+
+.listItemShow {
+    display: block;
+}
+
 textarea{
   width: 139px;
 }
