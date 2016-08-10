@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="Spotify.css">
+    <title>Spotify Search</title>
+</head>
+<body>
+    <div id="header">Spotify Search</div>
+    <form id="form">
+        <input type="text" id="input">
+        <select name="select" id="select">
+            <option value="artist" selected>Artist</option>
+            <option value="album">Album</option>
+        </select>
+        <div class="button" id="button">
+            <button type="submit">Go</button>
+         </div>
+    </form>
+    <div id="searchTerm"></div>
+    <div id="Container">
+    </div>
+    <div class="button invisible" id="button2">
+    <button type="button">Get more</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="Spotify.js"></script>
+</body>
+</html>
