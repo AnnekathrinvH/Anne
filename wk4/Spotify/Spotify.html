@@ -16,7 +16,12 @@
             <button type="submit">Go</button>
          </div>
     </form>
-    <div id="searchTerm"></div>
+    <div id="searchTerm">
+        <script id="search" type="text/handlebars">
+                Results for "{{searchFor}}"
+        </script>
+    </div>
+
     <div id="Container">
         <script id="searchResults" type="text/handlebars">
             {{#.}}

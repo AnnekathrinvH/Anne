@@ -18,8 +18,14 @@
 
     $("#form" ).submit(function(e) {
         $('#Container').html('');
-        input = $('#input').val();
         selector = $('#select').val();
+        input = $('#input').val();
+
+        var source = {searchFor: input}
+        var inputTerm = Handlebars.templates.search(source);
+        $('#searchTerm').append(inputTerm);
+        console.log(inputTerm);
+
         getData();
         e.preventDefault();
     });
@@ -35,7 +41,6 @@
     };
 
     function showResults() {
-        $('#searchTerm').html('Results for "'+input+'"');
 
         if(selector === 'artist') {
             choice = data.artists;
