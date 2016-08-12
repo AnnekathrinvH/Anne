@@ -1,4 +1,13 @@
 (function(){
+    var templates = document.querySelectorAll('script[type="text/handlebars"]');
+
+    Handlebars.templates = Handlebars.templates || {};
+
+    Array.prototype.slice.call(templates).forEach(function(script) {
+        Handlebars.templates[script.id] = Handlebars.compile(script.innerHTML);
+    });
+
+
     var input;
     var selector;
     var data;
@@ -48,20 +57,23 @@
     }
 
 
+
     function loadItems() {
-        console.log(choice);
+        console.log(choice.items);
         for(var i = 0; i < choice.items.length; i++) {
             if(choice.items[i].images[0] === undefined) {
-                img = 'http://www.wpclipart.com/music/performance/more_performers/marching_band.png'
+                choice.items[i].images[0] = {url: 'http://www.wpclipart.com/music/performance/more_performers/marching_band.png'}
             }
-            else {
-                img = choice.items[i].images[0].url;
-                name = choice.items[i].name
-                url = choice.items[i].external_urls.spotify;
-            }
-
-            $('#Container').append('<a href ="'+url+'"><div id="result"><img src='+img+'><a/><div id="name"><a href ="'+url+'">'+name+'<a/></div></div>');
         }
+        console.log(choice.items);
+
+
+        var spotifyData = Handlebars.templates.searchResults(choice.items);
+        $('#Container').append(spotifyData);
+
+
+
+
         if(choice.next) {
             console.log('next');
             $('#button2').removeClass('invisible');

@@ -9,14 +9,18 @@ form{
     text-align: center;
     padding: 20px;
 }
-#button{
-    background-color: white;
-}
 #input{
     display: inline-block;
 }
 #select{
     display: inline-block;
+    font-size: 20px;
+    background-color: rgba(136, 241, 217, 0.74);
+}
+button{
+    display: inline-block;
+    background-color: rgba(136, 241, 217, 0.74);
+    font-size: 20px;
 }
 #button{
     display: inline-block;
@@ -27,7 +31,7 @@ form{
     text-align: center;
     padding: 60px;
 }
-#result{
+.result{
     padding: 20px;
 }
 #name{
