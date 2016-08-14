@@ -1,5 +1,7 @@
-#header{
+*{
     font-family: sans-serif;
+}
+#header{
     font-size: 40px;
     text-align: center;
     padding: 20px;
@@ -7,32 +9,45 @@
 form{
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
+}
+#inputDiv{
+    width: 100%;
 }
 #input{
-    display: inline-block;
+    position: relative;
+display: inline-block;
+width: 203px;
+height: 23px;
+margin: 6px;
+border-radius: 3px;
+border: 1px solid grey;
 }
 #select{
     display: inline-block;
     font-size: 20px;
-    background-color: rgba(136, 241, 217, 0.74);
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 button{
     display: inline-block;
-    background-color: rgba(136, 241, 217, 0.74);
+    background-color: white;
     font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 #button{
     display: inline-block;
 }
 #searchTerm{
-    font-family: sans-serif;
     font-size:  30px;
     text-align: center;
     padding: 60px;
 }
 .result{
     padding: 20px;
+    width: 100%;
 }
 #name{
     display: inline-block;
@@ -47,7 +62,6 @@ img{
     vertical-align: top;
 }
 #Container{
-    font-family: sans-serif;
     font-size: 30px;
 
 }

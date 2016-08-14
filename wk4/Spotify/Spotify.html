@@ -2,23 +2,25 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="Spotify.css">
-    <title>Spotify Search</title>
+    <title>SPOTIFY SEARCH</title>
 </head>
 <body>
-    <div id="header">Spotify Search</div>
+    <div id="header">SPOTIFY SEARCH</div>
     <form id="form">
-        <input type="text" id="input">
+        <div id="inputDiv">
+            <input type="text" id="input">
+        </div>
         <select name="select" id="select">
-            <option value="artist" selected>Artist</option>
-            <option value="album">Album</option>
+            <option value="artist" selected>ARTIST</option>
+            <option value="album">ALBUM</option>
         </select>
         <div class="button" id="button">
-            <button type="submit">Go</button>
+            <button type="submit">GO</button>
          </div>
     </form>
     <div id="searchTerm">
         <script id="search" type="text/handlebars">
-                Results for "{{searchFor}}"
+                RESULTS FOR "{{searchFor}}"
         </script>
     </div>
 

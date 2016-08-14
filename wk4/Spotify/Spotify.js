@@ -23,7 +23,7 @@
 
         var source = {searchFor: input}
         var inputTerm = Handlebars.templates.search(source);
-        $('#searchTerm').append(inputTerm);
+        $('#searchTerm').html(inputTerm);
         console.log(inputTerm);
 
         getData();
@@ -34,8 +34,6 @@
     function getData() {
         $.get('https://api.spotify.com/v1/search', { q: input, type: selector }, function(request) {
             data = request;
-            console.log(data);
-            console.log(selector);
             showResults();
         });
     };
@@ -77,14 +75,34 @@
         $('#Container').append(spotifyData);
 
 
-
-
         if(choice.next) {
             console.log('next');
-            $('#button2').removeClass('invisible');
-            $('#button2').click(function() {
+            var query = location.search.indexOf('scroll=infinite');
+            console.log(query)
+
+            if (query === -1) {
+                $('#button2').removeClass('invisible');
+                $('#button2').click(function() {
                 getMoreData();
-            })
+            })}
+            if (query > -1) {
+                function infiniteScroll() {
+                    setTimeout(function() {
+                        var windHeight = $(window).height();
+                        var docHeight = $(document).height();
+                        var diff = docHeight - 2*windHeight;
+                        var scroll = $('body').scrollTop();
+                        console.log(scroll);
+                        if (scroll>diff) {
+                            getMoreData();
+                        }
+                        else {
+                            infiniteScroll();
+                        }
+                    }, 2000);
+                }
+                infiniteScroll();
+            }
         }
         if (choice.next === null) {
             $('#button2').addClass('invisible');
@@ -100,7 +118,6 @@
             if (selector === 'album') {
                 choice = data.albums;
             }
-            console.log(data);
             loadItems();
         });
     };
